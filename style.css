@@ -18,6 +18,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Exile&display=swap');
 /* "Exile", system-ui; */
+
+@import url('https://fonts.googleapis.com/css2?family=Ewert&display=swap');
+/* font-family: "Ewert", serif; */
+
 * {
   color: red;
   padding: 0;
@@ -26,7 +30,7 @@
   /* background-color: rgb(1114, 114, 197); */
   /* background-color: rgb(104, 104, 237); */
   /* background-color: rgb(154, 96, 131); */
-  /* background-color: rgb(122, 178, 239); */
+  background-color: rgb(122, 178, 239);
 }
 
 h1, h2, h3, h4, h5, h6, span {
@@ -79,6 +83,9 @@ nav {
 }
 .mary:hover {
   color: red;
+  font-family: "Merriweather", serif;
+  letter-spacing: 3px;
+  transition: ease-in;
 }
 .phillis {
 font-family: "Exile", system-ui;
@@ -95,9 +102,10 @@ letter-spacing: 1px;
 }
 .nav_link-anchor-primary {
   background-color: red;
-  padding: 7px 10px;
+  padding: 7px 12px;
   border-radius: 8px;
   line-height: 1;
+  /* letter-spacing: 1.2px; */
   position: relative;
 }
 .nav_link-anchor-primary:hover {
