@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+/* "Merriweather", serif; body text */
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+/* "Alfa Slab One", serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+/* "Calistoga", serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+/* "Racing Sans One", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+/* "Monofett", monospace; */
+
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
+/* "Sonsie One", system-ui; */
+
+@import url('https://fonts.googleapis.com/css2?family=Exile&display=swap');
+/* "Exile", system-ui; */
+* {
+  color: red;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* background-color: rgb(1114, 114, 197); */
+  /* background-color: rgb(104, 104, 237); */
+  /* background-color: rgb(154, 96, 131); */
+  /* background-color: rgb(122, 178, 239); */
+}
+
+h1, h2, h3, h4, h5, h6, span {
+  color:hsl(from color h s l);
+  text-align: center;
+  line-height: 1.25;
+}
+p {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "Merriweather", serif;
+}
+li {
+  list-style-type: none;
+}
+
+/* NAVIGATION BAR */
+nav {
+  height: 250px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.personal-logo {
+  font-size: 60px;
+  margin-top: -30px;
+  font-family: "Racing Sans One", sans-serif;
+  /* font-size: 65px; */
+  /* font-family: "Monofett", monospace; */
+  /* font-family: "Sonsie One", system-ui; */
+  letter-spacing: 5px;
+  margin: 0 12px;
+}
+.personal-logo:hover{
+  color: pink;
+}
+.nav_link-list {
+  display: flex;
+}
+.nav_link-anchor{
+  color: pink;
+  margin: 0 12px;
+  text-decoration: none;
+}
+.mary {
+  font-family: "Sonsie One", system-ui;
+}
+.mary:hover {
+  color: red;
+}
+.phillis {
+font-family: "Exile", system-ui;
+}
+.phillis:hover {
+  color: red;
+  letter-spacing: 10px;
+  transition: ease-in;
+}
+.sue {
+font-family: "Alfa Slab One", serif;
+font-size: 16px;
+letter-spacing: 1px;
+}
+.nav_link-anchor-primary {
+  background-color: red;
+  padding: 7px 10px;
+  border-radius: 8px;
+  line-height: 1;
+  position: relative;
+}
+.nav_link-anchor-primary:hover {
+ top: -10px;
+color: white;
+background-color: pink;
+transition: ease;
+}
