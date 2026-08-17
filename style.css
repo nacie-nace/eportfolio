@@ -30,13 +30,25 @@
   /* background-color: rgb(1114, 114, 197); */
   /* background-color: rgb(104, 104, 237); */
   /* background-color: rgb(154, 96, 131); */
-  background-color: rgb(122, 178, 239);
+  /* background-color: rgb(122, 178, 239); */
 }
 
-h1, h2, h3, h4, h5, h6, span {
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* h1, h2, h3, h4, h5, h6, span { */
   color:hsl(from color h s l);
   text-align: center;
   line-height: 1.25;
+}
+h1 {
+  font-size: 32px;
 }
 p {
   line-height: 1.5;
@@ -46,32 +58,93 @@ p {
 li {
   list-style-type: none;
 }
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+#aboutme {
+  flex: 1;
+}
+
+.row {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
 /* NAVIGATION BAR */
+
 nav {
-  height: 250px;
+  min-height: 250px;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  /* padding: 80px 24px 0; */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 80px;
 }
 .personal-logo {
   font-size: 60px;
-  margin-top: -30px;
+  /* margin-top: 50px;
+  margin-bottom: 12px; */
   font-family: "Racing Sans One", sans-serif;
-  /* font-size: 65px; */
-  /* font-family: "Monofett", monospace; */
-  /* font-family: "Sonsie One", system-ui; */
   letter-spacing: 5px;
-  margin: 0 12px;
+  margin: 0;
+  position: relative;
+}
+.hoverme {
+  font-size: 12px;
+  color: pink;
+  transition: opacity 0.2s ease 120s;
+  letter-spacing: 5px;
+  padding: 8px;
+  margin-bottom: 12px;
 }
 .personal-logo:hover{
   color: pink;
+  transition: opacity .02 ease 60s;
+}
+.personal-logo:hover + .hoverme{
+opacity: 0;
+transition: ease;
+}
+.tooltip-container {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* position: relative;
+  display: inline-block; */
+}
+.tooltip {
+  font-family: "Merriweather", serif;
+  color: pink;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: ease-out 2s; 
+  position: relative;
+  /* display: flex;
+  flex-direction: column; */
+  padding: 0 70px 0 8px;
+}
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
 }
 .nav_link-list {
   display: flex;
+  margin-top: 36px;
+}
+.bold {
+  color: red;
+  /* font-weight: 700; */
+}
+.hi {
+  color: red;
 }
 .nav_link-anchor{
   color: pink;
@@ -113,4 +186,61 @@ letter-spacing: 1px;
 color: white;
 background-color: pink;
 transition: ease;
+}
+
+/* ABOUT ME */
+
+/* #about-me {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.about-me_info-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-me_picture-mask {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-bottom: 24px;
+overflow: hidden;
+}
+.about-me_pic {
+width: 100%;
+transform: scale(1.5);
+padding-top: 8px;
+margin-bottom: 28px;
+}
+.text-name {
+  color: pink;
+}
+.text-fse {
+  color: pink;
+}
+.about-me_info-para {
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+.about-me_info-title {
+margin-bottom: 16px;
+} */
+
+/* FOOTER */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 96px;
+}
+.footer-link {
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0 4px;
+  margin-top: auto;
 }
