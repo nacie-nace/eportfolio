@@ -29,8 +29,10 @@
   box-sizing: border-box;
   /* background-color: rgb(1114, 114, 197); */
   /* background-color: rgb(104, 104, 237); */
+  background-color: rgb(22, 8, 173);
   /* background-color: rgb(154, 96, 131); */
   /* background-color: rgb(122, 178, 239); */
+  /* background-color: rgb(120, 182, 253); */
 }
 
 html, body {
@@ -96,45 +98,176 @@ nav {
   margin: 0;
   position: relative;
 }
-.hoverme {
-  font-size: 12px;
-  color: pink;
-  transition: opacity 0.2s ease 120s;
-  letter-spacing: 5px;
-  padding: 8px;
-  margin-bottom: 12px;
+
+
+
+/* CENTER THE WHOLE INTRO */
+
+.about-me_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.personal-logo:hover{
-  color: pink;
-  transition: opacity .02 ease 60s;
+
+.about-me_info-container {
+  width: 100%;
 }
-.personal-logo:hover + .hoverme{
-opacity: 0;
-transition: ease;
+
+.grace-intro {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
-.tooltip-container {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* position: relative;
-  display: inline-block; */
-}
-.tooltip {
-  font-family: "Merriweather", serif;
-  color: pink;
-  font-size: 13px;
-  opacity: 0;
-  pointer-events: none;
-  transition: ease-out 2s; 
+
+
+/* WHOLE INTERACTIVE AREA */
+
+.grace-hover {
   position: relative;
-  /* display: flex;
-  flex-direction: column; */
-  padding: 0 70px 0 8px;
+  width: 600px;
+  height: 550px;
+
+  cursor: pointer;
+  overflow: visible;
 }
-.tooltip-container:hover .tooltip {
+
+
+/* HI I'M GRACE */
+
+.grace-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+
+  width: 500px;
+  height: 170px;
+
+  transform: translateX(-50%);
+
+  overflow: visible;
+}
+
+.grace-letter {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+
+  display: inline-block;
+
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1;
+
+  transform-origin: center;
+
+  transition:
+    left 0.65s cubic-bezier(.22, 1, .36, 1),
+    top 0.65s cubic-bezier(.22, 1, .36, 1),
+    transform 0.65s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* HOVER TO GET TO KNOW ME */
+.hover-curve {
+  position: absolute;
+
+  top: 30px;
+  left: 50%;
+
+  width: 400px;
+  height: 180px;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s ease;
+}
+
+.hover-letter {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  display: inline-block;
+
+  font-family: "Merriweather", serif;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1;
+
+  transform-origin: center;
+}
+
+
+/* disappear when the bio opens */
+
+.grace-hover:hover .hover-curve {
+  opacity: 0;
+
+  transform:
+    translateX(-50%)
+    translateY(8px);
+}
+
+
+/* BIO */
+.tooltip {
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  width: 390px;
+
+  transform: translateX(-50%) translateY(15px);
+
+  font-family: "Merriweather", serif;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.55;
+
+  /* CHANGE THIS */
+  text-align: center;
+
+  color: pink;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.5s ease 0.2s,
+    transform 0.6s cubic-bezier(.22, 1, .36, 1),
+    visibility 0s linear 0.2s;
+}
+
+
+/* HOVER STATE */
+
+.grace-hover:hover .hover-curve {
+  opacity: 0;
+  transform: translateX(-50%) translateY(10px);
+}
+
+.grace-hover:hover .tooltip {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+
+  transform: translateX(-50%) translateY(0);
 }
+
+.arrow {
+  display: inline-block;
+  transform: scaleX(1.5);
+  transform-origin: right center;
+  margin-right: 6px;
+}
+
+
+
 .nav_link-list {
   display: flex;
   margin-top: 36px;
@@ -186,6 +319,15 @@ letter-spacing: 1px;
 color: white;
 background-color: pink;
 transition: ease;
+}
+
+.cirsir {
+margin-left: 8px;
+}
+
+.cirsir:hover {
+  color: pink;
+
 }
 
 /* ABOUT ME */
